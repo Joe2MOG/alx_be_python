@@ -9,14 +9,11 @@ priority = input("Priority (high/medium/low): ").lower()
 # Ask if the task is time-bound
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# Initialize the reminder variable with 'Reminder' for time-bound tasks, 'Note' for non-time-bound tasks
+# Initialize the reminder
 if time_bound == "yes":
-    reminder_prefix = "Reminder"
+    reminder = f"Reminder: '{task}' is a "
 else:
-    reminder_prefix = "Note"
-
-# Start building the reminder
-reminder = f"{reminder_prefix}: '{task}' is a "
+    reminder = f"Note: '{task}' is a "
 
 # Process the task based on priority
 match priority:
